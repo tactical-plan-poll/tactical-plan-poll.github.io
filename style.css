@@ -8,3 +8,13 @@
 .brand-logo{display:block;width:48px;height:48px;object-fit:contain}.btn,input,button{font-family:inherit}
 
 .question-image{display:block;width:auto;max-width:100%;max-height:380px;object-fit:contain;margin:0 0 24px;border-radius:12px}
+
+.display .hero h1{font-size:clamp(32px,4vw,56px)}
+.display .question{font-size:clamp(30px,3.4vw,46px)}
+.display .option{font-size:clamp(17px,1.5vw,24px);min-height:80px}
+.display .result{font-size:1.1em}
+.display .question-image{max-height:32vh}
+
+.countdown{display:inline-flex;align-items:center;gap:9px;margin:16px 0 0;padding:8px 15px;border-radius:12px;background:#eaf0ff;color:#024ad8;font-size:10px;font-weight:700;letter-spacing:.12em}.countdown strong{font-size:28px;line-height:1;letter-spacing:0;font-variant-numeric:tabular-nums}.countdown.urgent{background:#fff0e7;color:#ae3f0c}.display .countdown strong{font-size:40px}
+
+.timer-stage{display:flex;align-items:center;gap:12px;margin-top:10px;min-height:96px}.timer-stage .countdown{margin:0}.thinking-host{position:relative;width:96px;height:96px;flex:none;animation:host-bob 2.5s ease-in-out infinite}.thinking-host img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}.thinking-host .blink-frame{opacity:0;animation:host-blink 4s infinite}.timer-caption{font-size:11px;letter-spacing:.12em;font-weight:700;color:#024ad8}.countdown.urgent{animation:timer-pulse .8s ease-in-out infinite alternate}@keyframes host-blink{0%,43%,47%,100%{opacity:0} 44%,46%{opacity:1}}@keyframes host-bob{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-5px) rotate(2deg)}}@keyframes timer-pulse{to{transform:scale(1.05)}}@media(max-width:600px){.thinking-host{width:70px;height:70px}.timer-stage{gap:8px;min-height:75px}.timer-caption{font-size:9px}}@media(prefers-reduced-motion:reduce){.thinking-host,.thinking-host .blink-frame,.countdown.urgent{animation:none}}
