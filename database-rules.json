@@ -1,0 +1,19 @@
+{
+  "rules": {
+    "poll": {
+      ".read": "auth != null",
+      ".write": "auth != null && auth.uid === 'REPLACE_WITH_PRESENTER_UID'"
+    },
+    "votes": {
+      "$round": {
+        "$question": {
+          ".read": "auth != null",
+          "$uid": {
+            ".write": "auth != null && auth.uid === $uid && !data.exists() && root.child('poll/status').val() === 'open' && root.child('poll/round').val() === $round && root.child('poll/current').val() + '' === $question",
+            ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 3 && newData.val() % 1 === 0"
+          }
+        }
+      }
+    }
+  }
+}
