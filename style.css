@@ -27,8 +27,17 @@
 .picture-stage{position:relative;width:fit-content;max-width:100%}.picture-stage .question-image{margin-bottom:24px}.display .picture-stage .thinking-host{position:absolute;left:auto;top:auto;right:0;bottom:0;width:clamp(110px,14vw,190px);height:clamp(110px,14vw,190px);animation:display-host-bounce 2s ease-in-out infinite}.display .picture-stage .host-vertical{animation:none}.display .thinking-host.host-timeout{animation:none}.thinking-host.host-timeout .host-vertical{animation:none}@keyframes display-host-bounce{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-8px) rotate(2deg)}}@media(max-width:600px){main:not(.display):not(.presenter) .thinking-host{--host-size:112px}}@media(prefers-reduced-motion:reduce){.display .picture-stage .thinking-host{animation:none}}
 
 /* Colorful game-show title and participant animation. */
-.title-primary{color:#024ad8}.title-accent{color:#ed6b24}
+.title-primary{color:#024ad8}.title-accent{color:#6b6d70}
 main:not(.display):not(.presenter) .thinking-host{--host-size:150px;animation-duration:4s}
 main:not(.display):not(.presenter) .thinking-host .host-vertical{animation-duration:2.9s}
 @media(max-width:600px){main:not(.display):not(.presenter) .thinking-host{--host-size:min(140px, 36vw);width:var(--host-size);height:var(--host-size)}}
 @media(prefers-reduced-motion:reduce){main:not(.display):not(.presenter) .thinking-host,main:not(.display):not(.presenter) .thinking-host .host-vertical{animation:none}}
+
+/* Keep the display host partly beyond the image and focus the participant view. */
+.display .picture-stage .thinking-host{right:0;translate:50% 0}
+.participant .layout{grid-template-columns:1fr;max-width:900px;margin:auto}
+.participant .hero .eyebrow,.participant .hero p{display:none}
+body:has(main.participant) footer{display:none}
+@media(max-width:760px){.display .picture-stage .thinking-host{translate:25% 0}}
+
+.answer-count{display:flex;align-items:baseline;gap:9px;margin:18px 0;color:#526679;font-size:15px;font-weight:500}.answer-count strong{font-size:25px;line-height:1;color:#024ad8;font-variant-numeric:tabular-nums}.display .answer-count{font-size:18px}.display .answer-count strong{font-size:30px}
