@@ -41,3 +41,19 @@ body:has(main.participant) footer{display:none}
 @media(max-width:760px){.display .picture-stage .thinking-host{translate:25% 0}}
 
 .answer-count{display:flex;align-items:baseline;gap:9px;margin:18px 0;color:#526679;font-size:15px;font-weight:500}.answer-count strong{font-size:25px;line-height:1;color:#024ad8;font-variant-numeric:tabular-nums}.display .answer-count{font-size:18px}.display .answer-count strong{font-size:30px}
+
+/* Participant phone layout and prominent countdown. */
+.participant .hero,.participant #live-content{text-align:center}
+.participant .timer-stage{justify-content:center;flex-wrap:wrap;margin:18px auto 8px;gap:10px}
+.participant .countdown{display:flex;flex-direction:column;justify-content:center;gap:5px;width:132px;min-height:132px;border-radius:50%;padding:14px;background:#024ad8;color:#fff;box-shadow:0 7px 22px rgba(2,74,216,.25);font-size:10px;letter-spacing:.12em}
+.participant .countdown strong{font-size:58px;font-weight:700;line-height:.95}
+.participant .countdown.urgent{background:#bc302c;color:#fff}
+.participant .timer-caption{width:100%;text-align:center}
+.participant .question{margin-left:auto;margin-right:auto}
+.participant .picture-stage{margin-left:auto;margin-right:auto}
+.participant .options{margin-left:auto;margin-right:auto}
+.participant .option{text-align:center}
+.participant #message{text-align:center}
+@media(max-width:600px){.participant .countdown{width:112px;min-height:112px}.participant .countdown strong{font-size:50px}.participant .question{font-size:clamp(25px,7vw,34px)}}
+
+.answer-meter{min-width:155px;padding:10px 14px;border:1px solid #cddcf9;border-radius:14px;background:#fff;box-shadow:0 5px 16px #024ad816;color:#024ad8}.answer-meter-label{display:flex;align-items:baseline;gap:7px;font-size:11px;font-weight:700;letter-spacing:.1em}.answer-meter-label strong{font-size:29px;line-height:1;letter-spacing:0;font-variant-numeric:tabular-nums}.answer-meter-track{height:8px;margin-top:8px;border-radius:99px;background:#e6ecf8;overflow:hidden}.answer-meter-fill{height:100%;min-width:0;border-radius:99px;background:linear-gradient(90deg,#024ad8,#4f9bff);transition:width .5s ease}.display .answer-meter-label strong{font-size:38px}.display .answer-meter{min-width:190px}@media(prefers-reduced-motion:reduce){.answer-meter-fill{transition:none}}
