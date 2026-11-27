@@ -59,3 +59,15 @@ body:has(main.participant) footer{display:none}
 .answer-meter{min-width:155px;padding:10px 14px;border:1px solid #cddcf9;border-radius:14px;background:#fff;box-shadow:0 5px 16px #024ad816;color:#024ad8}.answer-meter-label{display:flex;align-items:baseline;gap:7px;font-size:11px;font-weight:700;letter-spacing:.1em}.answer-meter-label strong{font-size:29px;line-height:1;letter-spacing:0;font-variant-numeric:tabular-nums}.answer-meter-track{height:8px;margin-top:8px;border-radius:99px;background:#e6ecf8;overflow:hidden}.answer-meter-fill{height:100%;min-width:0;border-radius:99px;background:linear-gradient(90deg,#024ad8,#4f9bff);transition:width .5s ease}.display .answer-meter-label strong{font-size:38px}.display .answer-meter{min-width:190px}@media(prefers-reduced-motion:reduce){.answer-meter-fill{transition:none}}
 
 .participant .option[aria-pressed="true"]{border:2px solid #024ad8;background:#eaf0ff;box-shadow:0 0 0 3px #024ad81a}.participant .option[aria-pressed="true"] b{background:#024ad8;color:white}
+
+/* Center the presentation view and match the participant countdown. */
+.display .hero,.display #live-content{text-align:center}
+.display .timer-stage{justify-content:center;flex-wrap:wrap;margin:18px auto 8px;gap:14px}
+.display .countdown{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:5px;width:132px;min-height:132px;border-radius:50%;padding:14px;background:#024ad8;color:#fff;box-shadow:0 7px 22px rgba(2,74,216,.25);font-size:10px;letter-spacing:.12em}
+.display .countdown strong{font-size:58px;font-weight:700;line-height:.95}
+.display .countdown.urgent{background:#bc302c;color:#fff}
+.display .timer-caption{width:100%;text-align:center}
+.display .question,.display .picture-stage,.display .options{margin-left:auto;margin-right:auto}
+.display .option{text-align:center}
+.display .answer-meter{text-align:left}
+@media(max-width:600px){.display .countdown{width:112px;min-height:112px}.display .countdown strong{font-size:50px}}
